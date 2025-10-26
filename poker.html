@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poker Texas Hold'em VIP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="poker-container">
+    <h1>♣️ Texas Hold'em VIP ♠️</h1>
+
+    <div class="info">
+      <p class="navigation-link">
+        <a href="index.html" class="nav-btn">⬅️ Kembali ke Blackjack</a>
+      </p>
+      <p>Saldo Terhubung: $<span id="balance">100</span> | Loyalitas: <span id="loyalty-points">0</span> LP</p>
+      <p id="poker-message">Atur Blind dan Mulai Putaran.</p>
+      <div class="pot-display">
+        <p>Pot: $<span id="pot-amount">0</span></p>
+        <p>Dealer/AI Bet: $<span id="ai-bet">0</span></p>
+        <p>Taruhan Anda: $<span id="player-current-bet">0</span></p>
+      </div>
+    </div>
+
+    <div class="poker-table">
+      <div class="poker-player-area">
+        <h2>Dealer (AI)</h2>
+        <div id="ai-cards" class="poker-hand cards-hand"></div>
+      </div>
+
+      <h3>Kartu Komunitas</h3>
+      <div id="community-cards" class="community-cards cards-hand"></div>
+
+      <div class="poker-player-area">
+        <h2>Pemain</h2>
+        <div id="player-cards" class="poker-hand cards-hand"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label for="small-blind-amount">SB ($):</label>
+      <input type="number" id="small-blind-amount" value="5" min="1" max="100">
+      <label for="raise-input">Raise/Bet ($):</label>
+      <input type="number" id="raise-input" value="10" min="1" max="1000">
+    </div>
+
+    <div class="action-buttons">
+      <button id="start-round-btn">Mulai Putaran</button>
+      <button id="fold-btn" disabled>Fold</button>
+      <button id="check-call-btn" disabled>Check / Call</button>
+      <button id="raise-btn" disabled>Raise / Bet</button>
+    </div>
+  </div>
+
+  <script src="poker.js"></script>
+</body>
+</html>

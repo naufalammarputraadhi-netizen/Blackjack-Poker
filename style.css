@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #003300, #004d00);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+h1, h2, h3 { color: #ffea00; }
+
+a.nav-btn {
+  text-decoration: none;
+  background: #009900;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+a.nav-btn:hover {
+  background: #00cc00;
+}
+
+button.nav-btn, .action-buttons button {
+  background: #007700;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button.nav-btn:hover, .action-buttons button:hover {
+  background: #00aa00;
+}
+
+.hidden { display: none; }
+
+.cards-hand {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.card {
+  width: 60px;
+  height: 85px;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card.hidden { background: #444; color: #444; }
+
+#vip-lounge {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+#vip-lounge.hidden { display: none; }
+#vip-lounge > div {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.shop-item {
+  background: #333;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shop-item:hover { background: #555; }
+
+.poker-table { margin-top: 20px; }
+.pot-display { background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack Ultimate: VIP Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="blackjack-container">
+    <h1>🏆 Blackjack Ultimate VIP 💎</h1>
+
+    <div class="info">
+      <p class="navigation-link">
+        <a href="poker.html" class="nav-btn">➡️ Main Poker Texas Hold'em (Saldo Terhubung)</a>
+      </p>
+      <p id="message">Atur taruhan dan mulai game.</p>
+      <p>Saldo: $<span id="balance">100</span> | Loyalitas: <span id="loyalty-points">0</span> LP
+        <button id="vip-toggle" class="nav-btn">VIP LOUNGE</button>
+      </p>
+      <p>Taruhan Total: $<span id="current-bet">0</span></p>
+      <div class="daily-bonus-area">
+        <button id="claim-daily" class="nav-btn" disabled>Progress Misi: 0/3 Kemenangan</button>
+      </div>
+    </div>
+
+    <!-- VIP Lounge -->
+    <div id="vip-lounge" class="hidden">
+      <div>
+        <h2>VIP Lounge (Poin: <span id="lp-display">0</span>)</h2>
+        <p>Toko Kustomisasi & Penukaran Poin</p>
+        <div class="shop-items">
+          <div class="shop-item" data-item="theme-deluxe" data-cost="100">Deluxe Table (100 LP)</div>
+          <div class="shop-item" data-item="theme-gold-cards" data-cost="250">Gold Star Cards (250 LP)</div>
+          <div class="shop-item" data-item="lp-cash-out" data-cost="1000">Tarik $10 (1000 LP)</div>
+        </div>
+        <button id="close-vip" class="nav-btn">Tutup Lounge</button>
+      </div>
+    </div>
+
+    <div id="game-table">
+      <div id="dealer-area" class="player-area">
+        <h2>Dealer (<span id="dealer-score-display">?</span>)</h2>
+        <div id="dealer-cards" class="cards-hand"></div>
+      </div>
+
+      <div id="player-area" class="player-area">
+        <h2>Pemain (Skor: <span id="player-score-display">0</span>)</h2>
+        <div id="player-cards" class="cards-hand"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label for="bet-amount">Taruhan: </label>
+      <input type="number" id="bet-amount" value="10" min="1" max="1000">
+      <button id="start-game" class="nav-btn">Mulai Game</button>
+    </div>
+
+    <div id="action-buttons" class="action-buttons hidden">
+      <button id="hit-btn">Ambil Kartu (Hit)</button>
+      <button id="stand-btn">Tahan (Stand)</button>
+      <button id="double-btn">Double Down (X2)</button>
+      <button id="split-btn" disabled>Split</button>
+      <button id="surrender-btn">Surrender (50% Taruhan)</button>
+    </div>
+
+    <button id="reset-progress">⚠️ Reset Semua Progress Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
